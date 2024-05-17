@@ -121,6 +121,7 @@ class UserStore {
                 guard let unwrapped_data = data else {
                     OperationQueue.main.addOperation {
                         completion(.failure(UserStoreError.failedToReceiveServerResponse))
+                        print("failed to recieve response")
                     }
                     return
                 }
